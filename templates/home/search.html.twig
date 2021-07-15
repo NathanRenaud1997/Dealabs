@@ -1,0 +1,79 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+
+    <div class="container" style="margin-top: 20px">
+        <div class="row">
+            {% for bonPlan in bonPlans %}
+                <div class="col-md-3">
+                    <div class="card" style="margin-bottom: 15px">
+                        <div class="card-body">
+                            <div style="display: flex; align-items: center; width: 40%; justify-content: space-around">
+                                <a href="{{ path('bon_plan_liker', { 'id': bonPlan.id, 'value': -1 }) }}"
+                                   class="btn btn-info">-</a>
+                                <div style="color: red; font-weight: bold">{{ bonPlan.note }}°</div>
+                                <a href="{{ path('bon_plan_liker', { 'id': bonPlan.id, 'value': 1 }) }}"
+                                   class="btn btn-danger">+</a>
+                            </div>
+                        </div>
+                        <p class="card-text" style="margin: auto"><img src="{{ asset('img/'~ bonPlan.apercu) }}"
+                                                                       style="width: 150px; height: 150px;"></p>
+                        <div class="card-body" style="padding-bottom: 0">
+                            <h5 style="height: 2rem;">{{ bonPlan.title }}</h5>
+                            <p style="margin-top: 15px"><strong style="color: red">{{ bonPlan.prix }}€</strong>
+                                <s>{{ bonPlan.prixHabituel }}€</s> -30%</p>
+                            <p style="height: 3rem; overflow: hidden">{{ bonPlan.description }}</p>
+                            <hr>
+                            <div style="display: flex; justify-content: space-between">
+                                <p><strong>{{ bonPlan.UserCrea.username }}</strong></p>
+                                <div style="margin-bottom: 10px">{{ bonPlan.commentaires.count }} commentaire(s)</div>
+                            </div>
+                        </div>
+                        <a href="{{ path('bon_plan_details', { 'id': bonPlan.id }) }}"
+                           class="btn btn-info text-light">
+
+                            Voir le deal
+                        </a>
+                    </div>
+                </div>
+            {% endfor %}
+
+            {% for codePromo in codePromos %}
+                <div class="col-md-3">
+                    <div class="card" style="margin-bottom: 15px">
+                        <div class="card-body">
+                            <div style="display: flex; align-items: center; width: 40%; justify-content: space-around">
+                                <a href="{{ path('code_promo_liker', { 'id': codePromo.id, 'value': -1 }) }}"
+                                   class="btn btn-info">-</a>
+                                <div style="color: red; font-weight: bold">{{ codePromo.note }}°</div>
+                                <a href="{{ path('code_promo_liker', { 'id': codePromo.id, 'value': 1 }) }}"
+                                   class="btn btn-danger">+</a>
+                            </div>
+                        </div>
+                        <p class="card-text" style="margin: auto"><img src="{{ asset('img/'~ codePromo.apercu) }}"
+                                                                       style="width: 150px; height: 150px;"></p>
+
+                        <div class="card-body" style="padding-bottom: 0">
+                            <h5 style="height: 2rem;">{{ codePromo.title }}</h5>
+                            <p style="margin-top: 11px; color: #0dcaf0; border-style: dashed; border-width: 2px; border-radius: 2px; text-align: center"><strong>{{ codePromo.codePromo }}</strong></p>
+                            <p style="height: 3rem;">Codes promo {{ codePromo.partenaire.name }}</p>
+                            <hr>
+                            <div style="display: flex; justify-content: space-between">
+                                <p><strong>{{ codePromo.UserCrea.username }}</strong></p>
+                                <div style="margin-bottom: 10px">{{ codePromo.commentaires.count }} commentaire(s)</div>
+                            </div>
+                        </div>
+                        <a href="{{ path('code_promo_details', { 'id': codePromo.id }) }}"
+                           class="btn btn-info text-light">Profiter
+                            du code</a>
+                    </div>
+                </div>
+            {% endfor %}
+
+        </div>
+    </div>
+
+{% endblock %}
+
+
+

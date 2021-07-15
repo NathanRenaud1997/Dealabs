@@ -1,0 +1,54 @@
+{% extends 'my_account/index.html.twig' %}
+
+{% block title %}Mes alertes{% endblock %}
+
+{% block body %}
+    {{ parent() }}
+    <div class="container">
+        <div class="link-manage-alerts-container">
+            <div class="card">
+                <a class="nav-link" href="{{ path('my_alerts') }}">Fil d'alertes</a>
+                <a class="nav-link" href="{{ path('manage_alerts') }}">Gérer mes alertes</a>
+            </div>
+        </div>
+
+        <div class="new-alert-container">
+            <div class="card">
+                <div class="form-container">
+                    <h5>Nouvelle alerte</h5>
+                    <div>
+                        {{ form_start(form) }}
+                        {{ form_end(form) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="saved-deal-container">
+            <div class="card">
+                <div class="form-container">
+                    <h5>Mes alertes sauvegardées</h5>
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for alerte in alertes %}
+                            <tr>
+                                <td>{{ alerte.keyword }}</td>
+                                <td>
+                                    <a class="btn btn-primary" href="#">Editer</a>
+                                    <a class="btn btn-danger" href="#">Supprimer</a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

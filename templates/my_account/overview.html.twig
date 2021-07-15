@@ -1,0 +1,68 @@
+{% extends 'my_account/index.html.twig' %}
+
+{% block title %}Aperçu{% endblock %}
+
+{% block body %}
+    {{ parent() }}
+    <div>
+        <div class="overview-container">
+            <div class="card statistics">
+                <div class="stats">
+                    <h6 class="statistics-title">Statistiques</h6>
+                    <p class="posts-title">Posts</p>
+                    <p><strong>{{ countDeals }}</strong> deal(s)</p>
+                    <p><strong>{{ countCommentaries }}</strong> commentaire(s)</p>
+                </div>
+                <div class="palmares">
+                    <p class="palmares-title">Palmarès</p>
+                    <p><strong>{{ hottestRate }}°</strong> deal le plus hot</p>
+                    <p><strong>{{ averageRateDeal }}°</strong> en moyenne depuis un an</p>
+                    <p><strong>{{ hotPercentage | number_format(2) }}%</strong> de deals hot</p>
+                </div>
+            </div>
+            <div class="card badges" style="margin-left: 10px;">
+
+                        <div class="card">
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <img src="{{ asset('img/badge1.png') }}" style="width: 150px; height: 150px;">
+                                </div>
+                                <div class="col-lg-6">
+                                    <h3>Surveillant</h3>
+                                </div>
+
+                                <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: {{ LikeUser }}%"></div>
+                                </div>
+                            </div>
+                        </div>
+                <div class="card">
+                    <div class="row">
+                        <div class="col-lg-2">
+                            <img src="{{ asset('img/badge2.png') }}" style="width: 150px; height: 150px;">
+                        </div>
+                        <div class="col-lg-6">
+                            <h3>Cobaye</h3>
+                        </div>
+
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: {{ progressDeal }}%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="row">
+                        <div class="col-lg-2">
+                            <img src="{{ asset('img/badge3.png') }}" style="width: 150px; height: 150px;">
+                        </div>
+                        <div class="col-lg-6">
+                            <h3>Rapport de stage</h3>
+                        </div>
+
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: {{ CommUser }}%"></div>
+                        </div>
+                    </div>
+                </div>
+    </div>
+{% endblock %}

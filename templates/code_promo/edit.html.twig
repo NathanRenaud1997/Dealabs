@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Code promo{% endblock %}
+
+
+{% block javascripts%}
+    {{ parent() }}
+    {{ encore_entry_script_tags('codepromoJs') }}
+{% endblock %}
+{% block body %}
+    <h1>Création d'un code promo</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="jumbotron">
+                    {{ form_start(form) }}
+                    {{ form_row(form.title) }}
+                    {{ form_row(form.url) }}
+                    {{ form_row(form.description) }}
+                    {{ form_row(form.codePromo) }}
+                    {{ form_row(form.partenaire) }}
+                    {{ form_row(form.categories) }}
+
+                    <div class="row">
+                        <div class="col-6">
+                            {{ form_row(form.apercu) }}
+                        </div>
+                        <div class="col-6">
+                            <img src="{{ asset('img/'~ codepromo.apercu) }}"width="150px" height="150px">
+                        </div>
+
+                    </div>
+                    {{ form_end(form) }}
+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="jumbotron">
+                    <h1>Apercu du code promo: </h1>
+                    <div class="apercu-title"></div>
+                    <div class="apercu-description"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

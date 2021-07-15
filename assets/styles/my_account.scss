@@ -1,0 +1,35 @@
+.myaccount_information {
+  display: flex;
+  align-items: center;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 1) 35%, rgb(94, 94, 94) 100%);
+  height: 150px;
+  color: white;
+  padding-left: 15px;
+
+  .title {
+    font-weight: bold;
+  }
+
+  .information-user {
+    display: flex;
+
+    .inscrit {
+      color: #848484;
+    }
+
+    .online-text {
+      margin-left: 10px;
+      color: #00cc00;
+    }
+  }
+}
+
+
+
+.my-account {
+  .nav-link {
+    color: #4b4b4b;
+    font-weight: bold;
+  }
+}

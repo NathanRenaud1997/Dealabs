@@ -1,0 +1,29 @@
+.container {
+  margin-top: 10px;
+
+  .link-manage-alerts-container {
+
+    .card {
+      margin-bottom: 10px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      height: 5vh;
+
+      a {
+        cursor: pointer;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .saved-deal-container {
+    margin-top: 10px;
+    .card {
+      padding: 10px;
+      display: flex;
+      justify-content: flex-start;
+    }
+  }
+}

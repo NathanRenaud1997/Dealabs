@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}My account{% endblock %}
+
+{% block body %}
+    <div class="myaccount_information">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="row-8 title">{{ app.user.username }}</div>
+                <div class="information-user">
+                    <div class="row-8 inscrit">Inscrit depuis
+                        le {{ app.user.dateCreation | format_date('full', locale='fr') }}</div>
+                    <div class="online-text">En ligne</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="my-account">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{{ path('mon_compte_apercu') }}">Aperçu</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path('published_deals') }}">Deals ({{ countDeals }})</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path('saved_deals') }}">Deals sauvegardés</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path('my_alerts') }}">Mes alertes (0)</a>
+            </li>
+        </ul>
+    </div>
+{% endblock %}

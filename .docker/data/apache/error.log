@@ -1,0 +1,109 @@
+[Wed May 19 13:16:19.707079 2021] [ssl:info] [pid 17:tid 139768733397056] AH01883: Init: Initialized OpenSSL library
+AH00112: Warning: DocumentRoot [/var/www/dealabs/public] does not exist
+[Wed May 19 13:16:19.731434 2021] [ssl:info] [pid 17:tid 139768733397056] AH01883: Init: Initialized OpenSSL library
+[Wed May 19 13:16:19.733128 2021] [mpm_event:notice] [pid 17:tid 139768733397056] AH00489: Apache/2.4.25 (Debian) OpenSSL/1.0.2u configured -- resuming normal operations
+[Wed May 19 13:16:19.734088 2021] [core:notice] [pid 17:tid 139768733397056] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND -e info'
+[Wed May 19 13:19:27.570882 2021] [ssl:info] [pid 9:tid 139711539466304] AH01883: Init: Initialized OpenSSL library
+AH00112: Warning: DocumentRoot [/var/www/dealabs/public] does not exist
+[Wed May 19 13:19:27.594939 2021] [ssl:info] [pid 9:tid 139711539466304] AH01883: Init: Initialized OpenSSL library
+[Wed May 19 13:19:27.595408 2021] [core:warn] [pid 9:tid 139711539466304] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed May 19 13:19:27.596659 2021] [mpm_event:notice] [pid 9:tid 139711539466304] AH00489: Apache/2.4.25 (Debian) OpenSSL/1.0.2u configured -- resuming normal operations
+[Wed May 19 13:19:27.596946 2021] [core:notice] [pid 9:tid 139711539466304] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND -e info'
+[Wed May 19 13:22:14.829674 2021] [ssl:info] [pid 10:tid 139945457553472] AH01883: Init: Initialized OpenSSL library
+AH00112: Warning: DocumentRoot [/var/www/dealabs/public] does not exist
+[Wed May 19 13:22:14.849005 2021] [ssl:info] [pid 10:tid 139945457553472] AH01883: Init: Initialized OpenSSL library
+[Wed May 19 13:22:14.849423 2021] [core:warn] [pid 10:tid 139945457553472] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed May 19 13:22:14.850482 2021] [mpm_event:notice] [pid 10:tid 139945457553472] AH00489: Apache/2.4.25 (Debian) OpenSSL/1.0.2u configured -- resuming normal operations
+[Wed May 19 13:22:14.850785 2021] [core:notice] [pid 10:tid 139945457553472] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND -e info'
+[Tue May 25 11:40:21.807589 2021] [ssl:info] [pid 10:tid 140666668699712] AH01883: Init: Initialized OpenSSL library
+AH00112: Warning: DocumentRoot [/var/www/dealabs/public] does not exist
+[Tue May 25 11:40:21.834951 2021] [ssl:info] [pid 10:tid 140666668699712] AH01883: Init: Initialized OpenSSL library
+[Tue May 25 11:40:21.835546 2021] [core:warn] [pid 10:tid 140666668699712] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Tue May 25 11:40:21.836459 2021] [mpm_event:notice] [pid 10:tid 140666668699712] AH00489: Apache/2.4.25 (Debian) OpenSSL/1.0.2u configured -- resuming normal operations
+[Tue May 25 11:40:21.836933 2021] [core:notice] [pid 10:tid 140666668699712] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND -e info'
+[Tue May 25 16:44:33.416761 2021] [ssl:info] [pid 9:tid 140358294536256] AH01883: Init: Initialized OpenSSL library
+AH00112: Warning: DocumentRoot [/var/www/dealabs/public] does not exist
+[Tue May 25 16:44:33.471049 2021] [ssl:info] [pid 9:tid 140358294536256] AH01883: Init: Initialized OpenSSL library
+[Tue May 25 16:44:33.471931 2021] [core:warn] [pid 9:tid 140358294536256] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Tue May 25 16:44:33.474256 2021] [mpm_event:notice] [pid 9:tid 140358294536256] AH00489: Apache/2.4.25 (Debian) OpenSSL/1.0.2u configured -- resuming normal operations
+[Tue May 25 16:44:33.475606 2021] [core:notice] [pid 9:tid 140358294536256] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND -e info'
+[Wed May 26 06:03:48.481099 2021] [ssl:info] [pid 10:tid 140028865347648] AH01883: Init: Initialized OpenSSL library
+AH00112: Warning: DocumentRoot [/var/www/dealabs/public] does not exist
+[Wed May 26 06:03:48.528534 2021] [ssl:info] [pid 10:tid 140028865347648] AH01883: Init: Initialized OpenSSL library
+[Wed May 26 06:03:48.529732 2021] [core:warn] [pid 10:tid 140028865347648] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed May 26 06:03:48.531785 2021] [mpm_event:notice] [pid 10:tid 140028865347648] AH00489: Apache/2.4.25 (Debian) OpenSSL/1.0.2u configured -- resuming normal operations
+[Wed May 26 06:03:48.532587 2021] [core:notice] [pid 10:tid 140028865347648] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND -e info'
+[Wed May 26 11:43:24.240618 2021] [ssl:info] [pid 10:tid 139723208093760] AH01883: Init: Initialized OpenSSL library
+AH00112: Warning: DocumentRoot [/var/www/dealabs/public] does not exist
+[Wed May 26 11:43:24.278304 2021] [ssl:info] [pid 10:tid 139723208093760] AH01883: Init: Initialized OpenSSL library
+[Wed May 26 11:43:24.278852 2021] [core:warn] [pid 10:tid 139723208093760] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed May 26 11:43:24.280514 2021] [mpm_event:notice] [pid 10:tid 139723208093760] AH00489: Apache/2.4.25 (Debian) OpenSSL/1.0.2u configured -- resuming normal operations
+[Wed May 26 11:43:24.281424 2021] [core:notice] [pid 10:tid 139723208093760] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND -e info'
+[Wed May 26 18:08:09.624360 2021] [ssl:info] [pid 17:tid 140212810620992] AH01883: Init: Initialized OpenSSL library
+AH00112: Warning: DocumentRoot [/var/www/dealabs/public] does not exist
+[Wed May 26 18:08:09.646556 2021] [ssl:info] [pid 17:tid 140212810620992] AH01883: Init: Initialized OpenSSL library
+[Wed May 26 18:08:09.647740 2021] [mpm_event:notice] [pid 17:tid 140212810620992] AH00489: Apache/2.4.25 (Debian) OpenSSL/1.0.2u configured -- resuming normal operations
+[Wed May 26 18:08:09.648593 2021] [core:notice] [pid 17:tid 140212810620992] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND -e info'
+[Thu May 27 06:12:35.546504 2021] [ssl:info] [pid 9:tid 140611755311168] AH01883: Init: Initialized OpenSSL library
+AH00112: Warning: DocumentRoot [/var/www/dealabs/public] does not exist
+[Thu May 27 06:12:35.610746 2021] [ssl:info] [pid 9:tid 140611755311168] AH01883: Init: Initialized OpenSSL library
+[Thu May 27 06:12:35.611997 2021] [core:warn] [pid 9:tid 140611755311168] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Thu May 27 06:12:35.614416 2021] [mpm_event:notice] [pid 9:tid 140611755311168] AH00489: Apache/2.4.25 (Debian) OpenSSL/1.0.2u configured -- resuming normal operations
+[Thu May 27 06:12:35.615265 2021] [core:notice] [pid 9:tid 140611755311168] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND -e info'
+[Thu May 27 07:51:00.702296 2021] [ssl:info] [pid 9:tid 139695683764288] AH01883: Init: Initialized OpenSSL library
+AH00112: Warning: DocumentRoot [/var/www/dealabs/public] does not exist
+[Thu May 27 07:51:00.744338 2021] [ssl:info] [pid 9:tid 139695683764288] AH01883: Init: Initialized OpenSSL library
+[Thu May 27 07:51:00.745950 2021] [core:warn] [pid 9:tid 139695683764288] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Thu May 27 07:51:00.747801 2021] [mpm_event:notice] [pid 9:tid 139695683764288] AH00489: Apache/2.4.25 (Debian) OpenSSL/1.0.2u configured -- resuming normal operations
+[Thu May 27 07:51:00.748497 2021] [core:notice] [pid 9:tid 139695683764288] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND -e info'
+[Mon May 31 06:07:02.407482 2021] [ssl:info] [pid 17:tid 140516220624960] AH01883: Init: Initialized OpenSSL library
+AH00112: Warning: DocumentRoot [/var/www/dealabs/public] does not exist
+[Mon May 31 06:07:02.458658 2021] [ssl:info] [pid 17:tid 140516220624960] AH01883: Init: Initialized OpenSSL library
+[Mon May 31 06:07:02.460816 2021] [mpm_event:notice] [pid 17:tid 140516220624960] AH00489: Apache/2.4.25 (Debian) OpenSSL/1.0.2u configured -- resuming normal operations
+[Mon May 31 06:07:02.461716 2021] [core:notice] [pid 17:tid 140516220624960] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND -e info'
+[Mon May 31 07:00:37.344589 2021] [ssl:info] [pid 16:tid 139818845196352] AH01883: Init: Initialized OpenSSL library
+AH00112: Warning: DocumentRoot [/var/www/dealabs/public] does not exist
+[Mon May 31 07:00:37.392111 2021] [ssl:info] [pid 16:tid 139818845196352] AH01883: Init: Initialized OpenSSL library
+[Mon May 31 07:00:37.395030 2021] [mpm_event:notice] [pid 16:tid 139818845196352] AH00489: Apache/2.4.25 (Debian) OpenSSL/1.0.2u configured -- resuming normal operations
+[Mon May 31 07:00:37.395877 2021] [core:notice] [pid 16:tid 139818845196352] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND -e info'
+[Mon May 31 08:57:53.081409 2021] [ssl:info] [pid 10:tid 139937023217728] AH01883: Init: Initialized OpenSSL library
+AH00112: Warning: DocumentRoot [/var/www/dealabs/public] does not exist
+[Mon May 31 08:57:53.124929 2021] [ssl:info] [pid 10:tid 139937023217728] AH01883: Init: Initialized OpenSSL library
+[Mon May 31 08:57:53.125637 2021] [core:warn] [pid 10:tid 139937023217728] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Mon May 31 08:57:53.128340 2021] [mpm_event:notice] [pid 10:tid 139937023217728] AH00489: Apache/2.4.25 (Debian) OpenSSL/1.0.2u configured -- resuming normal operations
+[Mon May 31 08:57:53.129270 2021] [core:notice] [pid 10:tid 139937023217728] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND -e info'
+[Wed Jun 02 06:10:00.822561 2021] [ssl:info] [pid 9:tid 139770433552448] AH01883: Init: Initialized OpenSSL library
+AH00112: Warning: DocumentRoot [/var/www/dealabs/public] does not exist
+[Wed Jun 02 06:10:00.882455 2021] [ssl:info] [pid 9:tid 139770433552448] AH01883: Init: Initialized OpenSSL library
+[Wed Jun 02 06:10:00.883550 2021] [core:warn] [pid 9:tid 139770433552448] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed Jun 02 06:10:00.885554 2021] [mpm_event:notice] [pid 9:tid 139770433552448] AH00489: Apache/2.4.25 (Debian) OpenSSL/1.0.2u configured -- resuming normal operations
+[Wed Jun 02 06:10:00.886251 2021] [core:notice] [pid 9:tid 139770433552448] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND -e info'
+[Mon Jun 07 06:10:21.715810 2021] [ssl:info] [pid 17:tid 139658442682432] AH01883: Init: Initialized OpenSSL library
+AH00112: Warning: DocumentRoot [/var/www/dealabs/public] does not exist
+[Mon Jun 07 06:10:21.742402 2021] [ssl:info] [pid 17:tid 139658442682432] AH01883: Init: Initialized OpenSSL library
+[Mon Jun 07 06:10:21.743557 2021] [mpm_event:notice] [pid 17:tid 139658442682432] AH00489: Apache/2.4.25 (Debian) OpenSSL/1.0.2u configured -- resuming normal operations
+[Mon Jun 07 06:10:21.743901 2021] [core:notice] [pid 17:tid 139658442682432] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND -e info'
+[Wed Jun 09 06:06:15.557817 2021] [ssl:info] [pid 10:tid 139866371645504] AH01883: Init: Initialized OpenSSL library
+AH00112: Warning: DocumentRoot [/var/www/dealabs/public] does not exist
+[Wed Jun 09 06:06:15.598219 2021] [ssl:info] [pid 10:tid 139866371645504] AH01883: Init: Initialized OpenSSL library
+[Wed Jun 09 06:06:15.599114 2021] [core:warn] [pid 10:tid 139866371645504] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed Jun 09 06:06:15.602066 2021] [mpm_event:notice] [pid 10:tid 139866371645504] AH00489: Apache/2.4.25 (Debian) OpenSSL/1.0.2u configured -- resuming normal operations
+[Wed Jun 09 06:06:15.602583 2021] [core:notice] [pid 10:tid 139866371645504] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND -e info'
+[Tue Jun 15 11:32:01.712507 2021] [ssl:info] [pid 10:tid 139715653857344] AH01883: Init: Initialized OpenSSL library
+AH00112: Warning: DocumentRoot [/var/www/dealabs/public] does not exist
+[Tue Jun 15 11:32:01.735394 2021] [ssl:info] [pid 10:tid 139715653857344] AH01883: Init: Initialized OpenSSL library
+[Tue Jun 15 11:32:01.736345 2021] [core:warn] [pid 10:tid 139715653857344] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Tue Jun 15 11:32:01.737581 2021] [mpm_event:notice] [pid 10:tid 139715653857344] AH00489: Apache/2.4.25 (Debian) OpenSSL/1.0.2u configured -- resuming normal operations
+[Tue Jun 15 11:32:01.738000 2021] [core:notice] [pid 10:tid 139715653857344] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND -e info'
+[Wed Jun 16 12:09:48.208155 2021] [ssl:info] [pid 9:tid 139965110734912] AH01883: Init: Initialized OpenSSL library
+AH00112: Warning: DocumentRoot [/var/www/dealabs/public] does not exist
+[Wed Jun 16 12:09:48.235978 2021] [ssl:info] [pid 9:tid 139965110734912] AH01883: Init: Initialized OpenSSL library
+[Wed Jun 16 12:09:48.237259 2021] [core:warn] [pid 9:tid 139965110734912] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed Jun 16 12:09:48.240223 2021] [mpm_event:notice] [pid 9:tid 139965110734912] AH00489: Apache/2.4.25 (Debian) OpenSSL/1.0.2u configured -- resuming normal operations
+[Wed Jun 16 12:09:48.240724 2021] [core:notice] [pid 9:tid 139965110734912] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND -e info'
+[Thu Jun 24 19:24:22.508218 2021] [ssl:info] [pid 9:tid 140701094158400] AH01883: Init: Initialized OpenSSL library
+AH00112: Warning: DocumentRoot [/var/www/dealabs/public] does not exist
+[Thu Jun 24 19:24:22.533616 2021] [ssl:info] [pid 9:tid 140701094158400] AH01883: Init: Initialized OpenSSL library
+[Thu Jun 24 19:24:22.534185 2021] [core:warn] [pid 9:tid 140701094158400] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Thu Jun 24 19:24:22.535151 2021] [mpm_event:notice] [pid 9:tid 140701094158400] AH00489: Apache/2.4.25 (Debian) OpenSSL/1.0.2u configured -- resuming normal operations
+[Thu Jun 24 19:24:22.535624 2021] [core:notice] [pid 9:tid 140701094158400] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND -e info'

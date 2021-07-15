@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CodePromoController!{% endblock %}
+
+{% block body %}
+    <div class="container" style="margin-top: 15px">
+        <div class="row">
+            {% for code_promo in code_promos %}
+                <div class="col-sm-10" style="margin-bottom: 10px">
+                    <div class="card">
+                        <div style="display: flex; align-items: center">
+                            <p style="margin-right: 10px;"><img src="{{ asset('img/'~ code_promo.apercu) }}"
+                                                                style="width: 150px; height: 150px; margin: auto">
+                            </p>
+                            <div style="width: 100%">
+                                <div style="color: red; font-weight: bold">{{ code_promo.note }}°</div>
+                                <p><strong>{{ code_promo.title }}</strong></p>
+                                <p style="margin-top: 15px">Codes promo <strong style="color: #0dcaf0">{{ code_promo.partenaire.name }}
+                                        </strong></p>
+
+                                <div style="display: flex; justify-content: stretch;">
+                                <a href="#"
+                                   class="btn btn-info" style="margin: 0 10px 10px 5px; width: 50%;">Profiter du code</a>
+                                <a href="#"
+                                   class="btn btn-outline-info" style="margin: 0 10px 10px 5px; width: 50%; border-style: dashed; color: black; border-color: black;">{{ code_promo.codePromo }}</a>
+                                </div>
+
+
+                                <p style="height: 3rem; overflow: hidden">{{ code_promo.description }}</p>
+                                <div style="display: flex; justify-content: space-between">
+                                    <p><strong>{{ code_promo.UserCrea.username }}</strong></p>
+                                    <div style="display: flex; align-items: center;">
+                                        <p>{{ code_promo.commentaires.count }} commentaire(s)</p>
+                                        <a href="{{ path('code_promo_details', { 'id': code_promo.id }) }}"
+                                           class="btn btn-info" style="margin: 0 10px 10px 5px;">Afficher plus</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

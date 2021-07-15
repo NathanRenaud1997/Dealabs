@@ -1,0 +1,63 @@
+security:
+    encoders:
+        App\Entity\User:
+            algorithm: bcrypt
+    # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
+    providers:
+        users_in_memory: { memory: null }
+        in_database:
+            entity:
+                class: App\Entity\User
+                property: username
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        main:
+            anonymous: true
+            pattern: ^((?!/api).)*$
+            provider: in_database
+            form_login:
+                login_path: secu_login
+                check_path: secu_login
+            logout:
+                path: secu_logout
+
+        login:
+          pattern: ^/api/login
+          stateless: true
+          anonymous: true
+          json_login:
+            provider: in_database
+            username_path: username
+            password_path: password
+            check_path: /api/login
+            success_handler: lexik_jwt_authentication.handler.authentication_success
+            failure_handler: lexik_jwt_authentication.handler.authentication_failure
+        api:
+          pattern: ^/api
+          stateless: true
+          anonymous: true
+          provider: in_database
+          guard:
+            authenticators:
+              - lexik_jwt_authentication.jwt_token_authenticator
+            # activate different ways to authenticate
+            # https://symfony.com/doc/current/security.html#firewalls-authentication
+
+            # https://symfony.com/doc/current/security/impersonating_user.html
+            # switch_user: true
+
+    # Easy way to control access for large sections of your site
+    # Note: Only the *first* access control that matches will be used
+    access_control:
+         - { path: ^/code-promo/new, roles: ROLE_USER }
+         - { path: ^/bon-plan/new, roles: ROLE_USER }
+         - { path: ^/code-promo/edit/, roles: ROLE_USER }
+         - { path: ^/bon-plan/edit/, roles: ROLE_USER }
+         - { path: ^/user/list, roles: ROLE_ADMIN }
+         - { path: ^/user/details/, roles: ROLE_ADMIN }
+         - { path: ^/user/edit/, roles: ROLE_ADMIN }
+         - { path: ^/user/delete/, roles: ROLE_ADMIN }
+         - { path: ^/api/deals/saved/., roles: IS_AUTHENTICATED_FULLY }
+        # - { path: ^/profile, roles: ROLE_USER }

@@ -1,0 +1,58 @@
+version: '3'
+services:
+  apache:
+    build: .docker/apache
+    container_name: dealabs_apache
+    ports:
+      - 8081:80
+    volumes:
+      - .docker/config/vhosts:/etc/apache2/sites-enabled
+      - .:/var/www/lpa_sf4
+      - .docker/data/apache:/var/log/apache2
+    environment:
+      PHP_IDE_CONFIG: serverName=dealabs.docker
+    depends_on:
+      - php
+
+  php:
+    build: .docker/php
+    container_name: dealabs_php
+    volumes:
+      - .:/var/www/dealabs
+    environment:
+      - mailcatcher_host=dealabs_mailcatcher
+    depends_on:
+      - mailcatcher
+
+  mailcatcher:
+    container_name: dealabs_mailcatcher
+    restart: on-failure:10
+    image: dockage/mailcatcher:0.7.1
+    ports:
+      - 1080:1080
+      - 1025:1025
+
+  mysql:
+    image: mysql:5.7
+    command: ['--default-authentication-plugin=mysql_native_password']
+    container_name: dealabs_mysql
+    volumes:
+      - .docker/data/db:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: dealabs
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: dealabs_phpmyadmin
+    environment:
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+    ports:
+      - 8090:80
+    links:
+      - mysql

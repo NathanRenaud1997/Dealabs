@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="container-sm">
+        <div class="jumbotronkai">
+            <div class="row">
+                <div class="col-2">
+                    <img src="{{ asset('img/'~ codePromo.apercu) }}"width="200px" height="200px">
+                </div>
+                <div class="col-8">
+                    <h4>{{ codePromo.title }}</h4>
+                    <div>Bon plan {{ codePromo.partenaire.name }}</div>
+                    <div><strong>{{ codePromo.userCrea.username }}</strong></div>
+                    <div>{{ codePromo.dateCreation | date("d/M/Y") }}</div>
+                    <div>{{ codePromo.description }}</div>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 20px;">
+                <div class="col-1">
+                    <a class="btn btn-danger"
+                       href="{{ path('code_promo_signaler', { 'id': codePromo.id }) }}">Signaler</a>
+                </div>
+                <div class="col-4">
+                    <a class="btn btn-primary"
+                       href="{{ path('code_promo_save', { 'id': codePromo.id }) }}">Sauvegarder</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        {% for commentaire in codePromo.commentaires %}
+            <div class="card">
+                <div class="card-body">
+                    <p class="card-text"><strong>{{ commentaire.user.username }}</strong></p>
+                    <p class="card-text">{{ commentaire.contenu }}</p>
+                </div>
+            </div>
+        {% endfor %}
+
+    </div>
+
+    <div class="container">
+        <h5>Laisser un commentaire</h5>
+        <div>
+            {{ form_start(form) }}
+            {{ form_end(form) }}
+        </div>
+    </div>
+{% endblock %}

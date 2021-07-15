@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="container">
+        <div class="jumbotronkai">
+            <div class="row bonplan_details_container">
+                <div class="col-2">
+                    <img src="{{ asset('img/'~ bonPlan.apercu) }}" width="200px" height="200px">
+                </div>
+                <div class="col-8">
+                    <h4>{{ bonPlan.title }}</h4>
+                    <div class="text-danger"><strong>{{ bonPlan.prix }}€</strong></div>
+                    <div><strong><s>{{ bonPlan.prixHabituel }}€</s></strong></div>
+                    <div><strong>-23%</strong></div>
+                    <div>Bon plan {{ bonPlan.partenaire.name }}</div>
+                    <div><strong>{{ bonPlan.userCrea.username }}</strong></div>
+                    <div>{{ bonPlan.dateCreation | date("d/M/Y") }}</div>
+                    <div>{{ bonPlan.description }}</div>
+                </div>
+            </div>
+
+            <div class="row" style="margin-top: 20px;">
+                <div class="col-1">
+                    <a class="btn btn-danger"
+                       href="{{ path('bon_plan_signaler', { 'id': bonPlan.id }) }}">Signaler</a>
+                </div>
+                <div class="col-4">
+                    <a class="btn btn-primary"
+                       href="{{ path('bon_plan_save', { 'id': bonPlan.id }) }}">Sauvegarder</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        {% for commentaire in bonPlan.commentaires %}
+            <div class="card">
+                <div class="card-body">
+                    <p class="card-text"><strong>{{ commentaire.user.username }}</strong></p>
+                    <p class="card-text">{{ commentaire.contenu }}</p>
+                </div>
+            </div>
+        {% endfor %}
+
+    </div>
+
+    <div class="container">
+        <h5>Laisser un commentaire</h5>
+        <div>
+            {{ form_start(form) }}
+            {{ form_end(form) }}
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello BonPlanController!{% endblock %}
+
+{% block body %}
+    <div class="container" style="margin-top: 15px">
+        <div class="row">
+            {% for bon_plan in bon_plans %}
+                <div class="col-sm-10" style="margin-bottom: 10px">
+                    <div class="card">
+                        <div style="display: flex; align-items: center">
+                            <p style="margin-right: 10px;"><img src="{{ asset('img/'~ bon_plan.apercu) }}"
+                                                                style="width: 150px; height: 150px; margin: auto">
+                            </p>
+                            <div style="width: 100%">
+                                <div style="color: red; font-weight: bold">{{ bon_plan.note }}°</div>
+                                <p><strong>{{ bon_plan.title }}</strong></p>
+                                <p style="margin-top: 15px"><strong style="color: red">{{ bon_plan.prix }}€</strong>
+                                    <s>{{ bon_plan.prixHabituel }}€</s> -30%</p>
+                                <p style="height: 3rem; overflow: hidden">{{ bon_plan.description }}</p>
+                                <div style="display: flex; justify-content: space-between">
+                                    <p><strong>{{ bon_plan.UserCrea.username }}</strong></p>
+                                    <div style="display: flex; align-items: center;">
+                                        <p>{{ bon_plan.commentaires.count }} commentaire(s)</p>
+                                        <a href="{{ path('bon_plan_details', { 'id': bon_plan.id }) }}" class="btn btn-info" style="margin: 0 10px 10px 5px;">Voir le deal</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

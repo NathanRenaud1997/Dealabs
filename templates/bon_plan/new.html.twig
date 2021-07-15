@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bon plan{% endblock %}
+{% block javascripts%}
+    {{ parent() }}
+    {{ encore_entry_script_tags('bonplanJs') }}
+{% endblock %}
+{% block body %}
+    <h1>Création d'un bon plan</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="jumbotron">
+                    {{ form_start(form) }}
+                    {{ form_end(form) }}
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="jumbotron">
+                    <h1>Apercu du bon plan : </h1>
+                    <div class="apercu-title"></div>
+                    <div class="apercu-description"></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

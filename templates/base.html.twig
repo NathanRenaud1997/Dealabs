@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {# Run `composer require symfony/webpack-encore-bundle`
+           and uncomment the following Encore helpers to start using Symfony UX #}
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('app') }}
+    {% endblock %}
+
+    {% block javascripts %}
+        {{ encore_entry_script_tags('app') }}
+    {% endblock %}
+    <ul class="nav nav-pills flex-column flex-sm-row bg-dark" style="height: 65px">
+        <li class="nav-item" style="margin: auto auto auto 5px;">
+        </li>
+        <li class="nav-item" style="margin: auto">
+            <a class="nav-link link-light" href="{{ path('bon_plan') }}">Bons plans</a>
+        </li>
+        <li class="nav-item" style="margin: auto">
+            <a class="nav-link link-light" href="{{ path('code_promo') }}">Codes promo</a>
+        </li>
+        <li class="nav-item" style="margin: auto">
+            <a class="nav-link link-light" href="{{ path('homeHot') }}">Hot</a>
+        </li>
+        <form method="GET" action="{{ path('search_deals') }}">
+            <div class="container">
+                <div class="row" style="margin: 10px auto auto auto;">
+                    <div class="col-lg-6"><input class="form-control" type="search" name="searchValue"
+                                                 placeholder="Search" aria-label="Search"></div>
+                    <div class="col-lg-6">
+                        <button class="btn btn-outline-success" id="btn-search" type="submit">Search</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <li class="flex-sm-fill text-sm-end" style="margin: auto 5px auto auto;">
+
+            {% if not app.user %}
+                <a href="{{ path('secu_login') }}" class="btn btn-success">Login</a>
+            {% else %}
+ 	        <a class="nav-link link-light" href="{{ path('code_promo_new') }}">Nouveau code promo</a>
+                <a class="nav-link link-light" href="{{ path('new_bon_plan') }}">Nouveau bon plan</a>
+                <a href="{{ path('mon_compte_apercu') }}" class="btn btn-success">Mon Compte</a>
+                <a href="{{ path('secu_logout') }}" class="btn btn-danger">Logout</a>
+            {% endif %}
+        </li>
+
+    </ul>
+</head>
+<body style="background-color: #ededed">
+{% block body %}
+
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,36 @@
+.overview-container {
+  display: flex;
+  margin: 10px;
+
+  .statistics {
+    display: flex;
+    padding: 14px;
+    width: 20%;
+    height: 50vh;
+
+    .stats {
+      height: 50%;
+
+      .statistics-title {
+        font-weight: bold;
+      }
+
+      .posts-title {
+        color: #727272;
+      }
+    }
+
+    .palmares {
+      height: 50%;
+
+      .palmares-title {
+        color: #727272;
+      }
+    }
+  }
+
+  .badges {
+    width: 80%;
+  }
+}
+
